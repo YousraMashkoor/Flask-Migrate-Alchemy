@@ -1,8 +1,1 @@
-from flask import Blueprint
-
-views = Blueprint('views', __name__)
-
-
-@views.route("/")
-def home():
-    return "App running on flask server" 
+from .base import base_bp
