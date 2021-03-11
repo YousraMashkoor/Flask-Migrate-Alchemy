@@ -1,4 +1,5 @@
 from app import db
+import enum
 
 '''
 Defining enum: Status
