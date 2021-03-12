@@ -20,10 +20,11 @@ def create_app():
     migrate.init_app(app, db)
 
     from .models import account
-    
-    from .views import base_bp
+
+    from .views import base_bp, account_bp
     
     app.register_blueprint(base_bp, url_prefix='/')
+    app.register_blueprint(account_bp)
 
 
     return app
