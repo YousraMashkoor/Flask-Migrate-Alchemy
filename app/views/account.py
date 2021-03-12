@@ -26,6 +26,20 @@ class CreateAccount(Resource):
 
 
     def get(self):
-        
-        return {'message': 'getting account details'}
+        accounts = Account.query.all()
+        data=[]
+        for account in accounts:
+            record = {
+                "account_id" : account.account_id,
+                "status" : account.status.value,
+                "balance" : account.balance,
+            }
+
+            data.append(record)
+
+        return {
+            'count': len(data),
+            'num_results': len(data),
+            'objects': data,
+        }
 
