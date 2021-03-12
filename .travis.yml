@@ -15,7 +15,7 @@ services:
 install:
 - pip install tox-travis
 before_script:
-- psql -c "CREATE USER postgres WITH PASSWORD 'postgres';"
+# - psql -c "CREATE USER postgres WITH PASSWORD 'postgres';"
 - createdb testing -O postgres -T template0
 
 script:
