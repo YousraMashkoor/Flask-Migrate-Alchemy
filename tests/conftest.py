@@ -1,6 +1,6 @@
 import pytest
 import os
-from app import create_app, db
+from .app import create_app, db
 
 os.environ['DB_USER'] = "postgres"
 os.environ['DB_PASSWORD'] = "postres"
