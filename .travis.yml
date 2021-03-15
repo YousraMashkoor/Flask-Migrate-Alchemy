@@ -19,6 +19,7 @@ install:
 before_script:
 # - psql -c "CREATE USER postgres WITH PASSWORD 'postgres';"
 - createdb testing -O postgres -T template0
+- createdb test3 -O postgres -T template0
 
 script:
 - python -m pytest -v tests/
